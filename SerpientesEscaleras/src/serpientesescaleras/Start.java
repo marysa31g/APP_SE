@@ -5,6 +5,9 @@
  */
 package serpientesescaleras;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,15 +15,60 @@ import javax.swing.JOptionPane;
  * @author maryza
  */
 public class Start extends javax.swing.JFrame {
-
+    protected int jugadorActual = 0;
+    public static JLabel[] VectorEtiquetas=new JLabel[30];
     /**
      * Creates new form Start
      */
     public Start() {
         initComponents();
         ocultar();
+        
+    inicializarVectorEtiquetas();
        // ocultarFichas();
     }
+    private void inicializarVectorEtiquetas(){
+        VectorEtiquetas[0]=jLabel2;
+        VectorEtiquetas[1]=jLabel3;
+        VectorEtiquetas[2]=jLabel4;
+        VectorEtiquetas[3]=jLabel5;
+        VectorEtiquetas[4]=jLabel6;
+        VectorEtiquetas[5]=jLabel7;
+        VectorEtiquetas[6]=jLabel8;
+        VectorEtiquetas[7]=jLabel9;
+        VectorEtiquetas[8]=jLabel10;
+        VectorEtiquetas[9]=jLabel11;
+        VectorEtiquetas[10]=jLabel12;
+        VectorEtiquetas[11]=jLabel13;
+        VectorEtiquetas[12]=jLabel14;
+        VectorEtiquetas[13]=jLabel15;
+        VectorEtiquetas[14]=jLabel16;
+        VectorEtiquetas[15]=jLabel17;
+        VectorEtiquetas[16]=jLabel18;
+        VectorEtiquetas[17]=jLabel19;
+        VectorEtiquetas[18]=jLabel20;
+        VectorEtiquetas[19]=jLabel21;
+        VectorEtiquetas[20]=jLabel22;
+        VectorEtiquetas[21]=jLabel23;
+        VectorEtiquetas[22]=jLabel24;
+        VectorEtiquetas[23]=jLabel25;
+        VectorEtiquetas[24]=jLabel26;
+        VectorEtiquetas[25]=jLabel27;
+        VectorEtiquetas[26]=jLabel28;
+        VectorEtiquetas[27]=jLabel29;
+        VectorEtiquetas[28]=jLabel30;
+     
+
+System.out.println("El valor de la posicion 1 en el arreglo es" + VectorEtiquetas[0]);
+
+}
+    
+    public void moverIcono(int pi,int pf,JLabel jug){
+        //new postion 9
+        JLabel lbl = VectorEtiquetas[9];
+        jug.setLocation(lbl.getLocation());
+    }
+
     public void ocultarFichas(){
     jLabel1.setVisible(false);
     jLabel2.setVisible(false);
@@ -52,8 +100,9 @@ public class Start extends javax.swing.JFrame {
     jLabel28.setVisible(false);
     jLabel29.setVisible(false);
     jLabel30.setVisible(false);
+    
     }
-        public void ocultar() {
+   public void ocultar() {
         btn_tirarDado.setVisible(false);
         Jlb_jugador1.setVisible(false);
         Jlb_namejuga1.setVisible(false);
@@ -160,6 +209,8 @@ public class Start extends javax.swing.JFrame {
         getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, 90, 60));
         getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 60, 50));
         getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, 70, 50));
+
+        jLabel1.setText("Hola");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 456, 50, 30));
 
         tablero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/escalera.jpg"))); // NOI18N
@@ -213,8 +264,6 @@ public class Start extends javax.swing.JFrame {
         lbl_aleatorio.setVisible(true);
         String dato = Integer.toString(numeroAleatorio);
         lbl_aleatorio.setText(dato);
-       // Jl1.setVisible(true);
-
         Jlb_jugador1.setVisible(true);
         Jlb_maquina.setVisible(true);
 

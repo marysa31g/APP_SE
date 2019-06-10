@@ -13,14 +13,12 @@ public class jugador {
 
     int posicion;
     int id;
-
+    
     jugador(int id) {
         this.id = id;
     }
-
     boolean tirar() {
         int d1 = (int) (Math.random() * 6) + 1;
-
         int d2 = (int) (Math.random() * 6) + 1;
         if (d1 > 6) {
             d1 = 6;

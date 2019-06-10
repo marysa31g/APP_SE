@@ -5,6 +5,8 @@
  */
 package clases;
 
+import serpientesescaleras.Start;
+
 /**
  *
  * @author maryza
@@ -12,9 +14,11 @@ package clases;
 public class Main {
 
     public static void main(String[] args) {
+        Start inicio=new Start();
         jugador j1 = new jugador(1);
         jugador j2 = new jugador(2);
         boolean terminado;
+        Start.main(args);
 
         do {
             if(!j1.tirar()){
@@ -27,6 +31,10 @@ public class Main {
             terminado = j1.posicion == 30 || j2.posicion == 30;
 
         } while (!terminado);
+        
+        
+System.out.println("\n");
+
     }
 
 }
